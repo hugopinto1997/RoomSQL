@@ -33,7 +33,7 @@ public class Thread extends AsyncTask {
     }
 
     public void addMovie(List<Movie> movies){
-        movies.add(new Movie("Avergers: Parciality War","DEI/UCA", "Violence"));
+        movies.add(new Movie("Avergers: Parciality War","UCA DEI", "Violence"));
         movies.add(new Movie("Surviving Android","PDM", "Drama"));
     }
 
