@@ -5,11 +5,12 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 
 import com.hugopinto.roomsql.Adapter.Movie
+import com.hugopinto.roomsql.Interfaces.MovieDAO;
 
 @Database(entities = {Movie.class}, version = 1)
 public class AppDatabase {
     private static AppDatabase INSTANCE;
-    public abstract MoviesDAO moviesDAO();
+    public abstract MovieDAO moviesDAO();
 
     public static AppDatabase getAppDataBase(Context context){
         if(INSTANCE==null){
