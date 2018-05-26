@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RoomSQL</string>
+    <string name="nota">Movie Name:</string>
+    <string name="moviename">Movie Name:</string>
+    <string name="studio">Studio:</string>
+    <string name="catedory">Catedory:</string>
+    <string name="addmovie">Add Movie:</string>
+    <string name="submit">Add Movie</string>
+    <string name="movieagregar">Add Movie</string>
+</resources>
