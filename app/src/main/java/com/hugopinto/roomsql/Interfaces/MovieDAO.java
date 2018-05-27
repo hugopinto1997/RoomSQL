@@ -4,7 +4,7 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
-import com.hugopinto.roomsql.Adapter.Movie;
+import com.hugopinto.roomsql.Classes.Movie;
 
 import java.util.List;
 

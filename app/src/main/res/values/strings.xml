@@ -7,4 +7,5 @@
     <string name="addmovie">Add Movie:</string>
     <string name="submit">Add Movie</string>
     <string name="movieagregar">Add Movie</string>
+    <string name="action_settings">settings</string>
 </resources>

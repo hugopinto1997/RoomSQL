@@ -1,16 +1,19 @@
 package com.hugopinto.roomsql.Threads;
 
-import android.graphics.Movie;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 
 import com.hugopinto.roomsql.Adapter.MovieAdapter;
 import com.hugopinto.roomsql.Classes.AppDatabase;
+import com.hugopinto.roomsql.Classes.Movie;
 
 import java.util.List;
 
-public class Thread extends AsyncTask {
+/**
+ * Created by UCA on 23/05/2018.
+ */
 
+public class Thread extends AsyncTask {
 
     private List<Movie> movies;
     private RecyclerView rv;
@@ -33,8 +36,8 @@ public class Thread extends AsyncTask {
     }
 
     public void addMovie(List<Movie> movies){
-        movies.add(new Movie("Avergers: Parciality War","UCA DEI", "Violence"));
-        movies.add(new Movie("Surviving Android","PDM", "Drama"));
+        movies.add(new Movie("Avergers:Parciality War","Horror", "UCA/DEI"));
+        movies.add(new Movie("Surviving PDM","Horror", "Magna 7 Productions"));
     }
 
 }

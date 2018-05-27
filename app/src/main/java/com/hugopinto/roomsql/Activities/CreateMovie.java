@@ -1,13 +1,17 @@
 package com.hugopinto.roomsql.Activities;
 
-import android.graphics.Movie;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.util.List;
+import com.hugopinto.roomsql.Classes.AppDatabase;
+import com.hugopinto.roomsql.Classes.Movie;
+import com.hugopinto.roomsql.R;
 
+import java.util.List;
 
 public class CreateMovie extends AppCompatActivity {
 
@@ -20,12 +24,12 @@ public class CreateMovie extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_movie);
+        setContentView(R.layout.crear);
 
-        btn = findViewById(R.id.btnRegistrar);
-        name = findViewById(R.id.txtName);
-        studio = findViewById(R.id.txtStudio);
-        category = findViewById(R.id.txtCat);
+        btn = findViewById(R.id.button);
+        name = findViewById(R.id.addmovie);
+        studio = findViewById(R.id.addstudio);
+        category = findViewById(R.id.addcategory);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +38,10 @@ public class CreateMovie extends AppCompatActivity {
                 sstudio = studio.getText().toString();
                 scat = category.getText().toString();
                 AppDatabase db = AppDatabase.getAppDataBase(getApplicationContext());
-                db.moviesDAO().insertMovie(new Movies(sname, sstudio, scat));
+                db.moviesDAO().insertMovie(new Movie(sname, sstudio, scat));
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }
-
-
-
-
-
 }
+

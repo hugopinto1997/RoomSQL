@@ -1,15 +1,22 @@
 package com.hugopinto.roomsql.Adapter;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.hugopinto.roomsql.Classes.Movie;
+import com.hugopinto.roomsql.R;
+
+import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHolder>{
 
-    List<Movies> movies;
+    List<Movie> movies;
 
-    public MovieAdapter(List<Movies> movies) {
+    public MovieAdapter(List<Movie> movies) {
         this.movies = movies;
     }
 
@@ -39,9 +46,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
         public MoviesViewHolder(View itemView) {
             super(itemView);
             card = itemView.findViewById(R.id.card_view);
-            name = itemView.findViewById(R.id.name);
+            name = itemView.findViewById(R.id.moviename);
             studio = itemView.findViewById(R.id.studio);
-            category = itemView.findViewById(R.id.cat);
+            category = itemView.findViewById(R.id.category);
         }
     }
 

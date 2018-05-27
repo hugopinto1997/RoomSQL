@@ -2,13 +2,13 @@ package com.hugopinto.roomsql.Classes;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
+import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.hugopinto.roomsql.Adapter.Movie
 import com.hugopinto.roomsql.Interfaces.MovieDAO;
 
 @Database(entities = {Movie.class}, version = 1)
-public class AppDatabase {
+public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
     public abstract MovieDAO moviesDAO();
 

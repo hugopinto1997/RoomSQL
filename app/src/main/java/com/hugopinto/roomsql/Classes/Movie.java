@@ -1,12 +1,12 @@
-package com.hugopinto.roomsql.Adapter;
+package com.hugopinto.roomsql.Classes;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-
-@Entity(tableName ="movies")
+@Entity(tableName = "movies")
 public class Movie {
+
     @PrimaryKey(autoGenerate = true)
     private int idMovie;
 

@@ -6,14 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toolbar;
 
-import com.hugopinto.roomsql.Adapter.Movie;
 import com.hugopinto.roomsql.Adapter.MovieAdapter;
+import com.hugopinto.roomsql.*;
 import com.hugopinto.roomsql.Classes.AppDatabase;
+import com.hugopinto.roomsql.Classes.Movie;
 import com.hugopinto.roomsql.Threads.Thread;
 
 import java.util.List;
@@ -31,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         rv=findViewById(R.id.recycler);
         adapter = new MovieAdapter(movies);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
