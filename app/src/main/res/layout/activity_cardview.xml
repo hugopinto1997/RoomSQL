@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
         android:gravity="center_vertical"
-        android:background=""
+        android:background="@drawable/layout"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -30,7 +30,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:background="#3949ab"
+            android:background="@drawable/layout2"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:layout_weight="2.5"
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="@string/moviename"
+                    android:text="@string/nommovie"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:textSize="16sp"/>
@@ -53,7 +53,8 @@
                     android:id="@+id/moviename"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="34dp"
+                    android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:textSize="16sp"/>
@@ -75,9 +76,10 @@
                     android:id="@+id/studio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
+                    android:textAlignment="center"
                     android:textSize="16sp"/>
 
             </LinearLayout>
@@ -98,6 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:textSize="16sp"/>

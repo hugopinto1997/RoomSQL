@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.hugopinto.roomsql.Classes.AppDatabase;
 import com.hugopinto.roomsql.Classes.Movie;
@@ -25,6 +26,8 @@ public class CreateMovie extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crear);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Add a movie:");
 
         btn = findViewById(R.id.button);
         name = findViewById(R.id.addmovie);
@@ -37,9 +40,14 @@ public class CreateMovie extends AppCompatActivity {
                 sname = name.getText().toString();
                 sstudio = studio.getText().toString();
                 scat = category.getText().toString();
-                AppDatabase db = AppDatabase.getAppDataBase(getApplicationContext());
-                db.moviesDAO().insertMovie(new Movie(sname, sstudio, scat));
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                if(sname.isEmpty() || sstudio.isEmpty() || scat.isEmpty()){
+                    Toast.makeText(v.getContext(), "Ingrese todos los campos", Toast.LENGTH_SHORT).show();
+                }else{
+                    AppDatabase db = AppDatabase.getAppDataBase(getApplicationContext());
+                    db.moviesDAO().insertMovie(new Movie(sname, scat, sstudio));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                }
+
             }
         });
     }

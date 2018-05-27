@@ -4,11 +4,11 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:id="@+id/add"
-android:background="#fff">
+android:background="@drawable/layout">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:background="#3d5afe"
+        android:background="@drawable/layout2"
         android:orientation="vertical"
         android:layout_height="wrap_content">
         <TextView
@@ -27,36 +27,50 @@ android:background="#fff">
         android:layout_height="wrap_content">
 
         <EditText
-            android:inputType="number"
+            android:inputType="textShortMessage"
             android:id="@+id/addmovie"
+            android:maxLength="40"
+            android:textColorHint="#3d5afe"
+            android:textAlignment="center"
             android:layout_marginRight="64dp"
             android:layout_marginLeft="64dp"
             android:layout_marginTop="64dp"
+            android:shadowColor="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/moviename"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             />
         <EditText
-            android:inputType="numberDecimal"
+            android:inputType="textShortMessage"
             android:id="@+id/addstudio"
+            android:maxLength="20"
+            android:textAlignment="center"
+            android:textColorHint="#3d5afe"
             android:layout_marginRight="64dp"
             android:layout_marginLeft="64dp"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
+            android:shadowColor="#ffffff"
             android:layout_height="wrap_content"
             android:hint="@string/studio"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             />
         <EditText
             android:id="@+id/addcategory"
             android:layout_marginRight="64dp"
             android:layout_marginLeft="64dp"
             android:layout_marginTop="16dp"
+            android:maxLength="20"
+            android:inputType="textShortMessage"
+            android:textColorLink="#ffffff"
+            android:textColorHint="#3d5afe"
+            android:shadowColor="#ffffff"
+            android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/catedory"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             />
 
         <Button
@@ -68,7 +82,7 @@ android:background="#fff">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
-            android:background="#536dfe"
+            android:background="@drawable/layout2"
             android:text="@string/movieagregar"/>
 
 
